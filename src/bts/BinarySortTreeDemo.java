@@ -56,7 +56,7 @@ class BinarySortTree{
 class Node {
     Integer value;
     Node lrft;
-    Node reght;
+    Node right;
 
     @Override
     public String toString() {
@@ -83,10 +83,10 @@ class Node {
             }
         }else {
             // 添加到右边
-            if (this.reght == null) {
-                this.reght = node;
+            if (this.right == null) {
+                this.right = node;
             }else {
-                this.reght.add(node);
+                this.right.add(node);
             }
         }
 
@@ -97,8 +97,8 @@ class Node {
             this.lrft.infixOrder();
         }
         System.out.println(this);
-        if (this.reght != null){
-            this.reght.infixOrder();
+        if (this.right != null){
+            this.right.infixOrder();
         }
     }
 
@@ -107,8 +107,8 @@ class Node {
         if (this.lrft != null){
             this.lrft.preOrder();
         }
-        if (this.reght != null){
-            this.reght.preOrder();
+        if (this.right != null){
+            this.right.preOrder();
         }
     }
 
@@ -116,8 +116,8 @@ class Node {
         if (this.lrft != null){
             this.lrft.lastOrder();
         }
-        if (this.reght != null){
-            this.reght.lastOrder();
+        if (this.right != null){
+            this.right.lastOrder();
         }
         System.out.println(this);
     }
